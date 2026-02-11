@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Section Responsive Site</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .sections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .section-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .image-wrapper {
+            position: relative;
+            overflow: hidden;
+            height: 250px;
+            background: #e0e0e0;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .image-wrapper:hover img {
+            transform: scale(1.25);
+        }
+
+        .text-box {
+            padding: 25px;
+            text-align: center;
+            min-height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .text-box p {
+            font-size: 1rem;
+            color: #333;
+            line-height: 1.8;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            margin: 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .cta-button:active {
+            transform: scale(0.98);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .sections-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .section-number {
+                font-size: 2.5rem;
+            }
+
+            .image-wrapper {
+                height: 200px;
+            }
+
+            .text-box {
+                padding: 20px;
+                min-height: 100px;
+            }
+
+            .text-box p {
+                font-size: 0.95rem;
+            }
+
+            .cta-button {
+                padding: 10px 25px;
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            .section-number {
+                font-size: 2rem;
+            }
+
+            .image-wrapper {
+                height: 180px;
+            }
+
+            .text-box {
+                padding: 15px;
+            }
+
+            .text-box p {
+                font-size: 0.9rem;
+            }
+
+            .cta-button {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+                margin: 15px;
+            }
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CADBOXX SYSTEM</h1>
+        <p>CREATE ACCOUNTS AT EACH OF THESE AND DOWNLOAD THE HOW-TO GUIDE</p>
+		
+		
+		
+    </header>
+
+    <div class="container">
+        <div class="sections-grid">
+            <!-- Section 1 -->
+            <div class="section">
+                <div class="section-number">COINBASE</div>
+                <div class="image-wrapper">
+                    <img src="COINBASE9.jpg" alt="Section 1 Image">
+                </div>
+                <div class="text-box">
+                    <p>The CADBOXX system worrks with Coinbase, please create a Coinbase account by clicking the button below.</p>
+                </div>
+                <button class="cta-button" onclick="handleClick(1)" >BUTTON 1</button>
+            </div>
+
+            <!-- Section 2 -->
+            <div class="section">
+                <div class="section-number">FREE BITCOIN</div>
+                <div class="image-wrapper">
+                    <img src="BITCOIN.jpg" alt="Section 2 Image">
+                </div>
+                <div class="text-box">
+                    <p>Please create an account by clicking the button below and follow the tutorial.</p>
+                </div>
+                <button class="cta-button" href="freebitco.in">BUTTON 2</button>
+            </div>
+
+            <!-- Section 3 -->
+            <div class="section">
+                <div class="section-number">PI NETWORK</div>
+                <div class="image-wrapper">
+                    <img src="PINETWORK.jpg" alt="Section 3 Image">
+                </div>
+                <div class="text-box">
+                    <p>Start mining PI coin</p>
+                </div>
+                <button class="cta-button" onclick="handleClick(3)">BUTTON 3</button>
+            </div>
+
+            <!-- Section 4 -->
+            <div class="section">
+                <div class="section-number">ROLLERCOIN</div>
+                <div class="image-wrapper">
+                    <img src="ROLLERCOIN.jpg" alt="Section 4 Image">
+                </div>
+                <div class="text-box">
+                    <p>Sign up at Rollercoin.com and take your first steps towards your fortune.</p>
+                </div>
+                <button class="cta-button" onclick="handleClick(4)">BUTTON 4</button>
+            </div>
+			
+			 <!-- Section 5-->
+            <div class="section">
+                <div class="section-number">HOW-TO</div>
+                <div class="text-box">
+                    <p>Now the accounts are ready you can start mining and collecting your fortune  </p>
+                </div>
+                <div class="text-box">
+                    <p>Start the day by doing a roll on freebitco.in. Set your alarm for every hour and do as many rolls as you can.</p>
+                </div>
+                <button class="cta-button" onclick="handleClick(5)">BUTTON 5</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 CADBOXX All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Handle Call-to-Action button clicks
+        function handleClick(sectionNumber) {
+            console.log(`Section ${sectionNumber} button clicked!`);
+            alert(`You clicked the Call to Action button for Section ${sectionNumber}!`);
+        }
+
+        // Optional: Add more JavaScript interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            // Log when the page is fully loaded
+            console.log('Page loaded successfully!');
+
+            // Add event listeners to all images for hover effects
+            const images = document.querySelectorAll('.image-wrapper img');
+            images.forEach(image => {
+                image.addEventListener('mouseenter', function() {
+                    console.log(`Hovering over image in section`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
