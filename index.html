@@ -1,308 +1,181 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4 Section Responsive Site</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f5f5f5;
-            line-height: 1.6;
-        }
-
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-            margin-bottom: 40px;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .sections-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 50px;
-        }
-
-        .section {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
-        }
-
-        .section-number {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            font-size: 3rem;
-            font-weight: bold;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .image-wrapper {
-            position: relative;
-            overflow: hidden;
-            height: 250px;
-            background: #e0e0e0;
-        }
-
-        .image-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-            cursor: pointer;
-        }
-
-        .image-wrapper:hover img {
-            transform: scale(1.25);
-        }
-
-        .text-box {
-            padding: 25px;
-            text-align: center;
-            min-height: 120px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .text-box p {
-            font-size: 1rem;
-            color: #333;
-            line-height: 1.8;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 12px 30px;
-            margin: 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-
-        .cta-button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 12px rgba(102, 126, 234, 0.4);
-        }
-
-        .cta-button:active {
-            transform: scale(0.98);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8rem;
-            }
-
-            header p {
-                font-size: 1rem;
-            }
-
-            .sections-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .section-number {
-                font-size: 2.5rem;
-            }
-
-            .image-wrapper {
-                height: 200px;
-            }
-
-            .text-box {
-                padding: 20px;
-                min-height: 100px;
-            }
-
-            .text-box p {
-                font-size: 0.95rem;
-            }
-
-            .cta-button {
-                padding: 10px 25px;
-                font-size: 0.95rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 1.5rem;
-            }
-
-            .section-number {
-                font-size: 2rem;
-            }
-
-            .image-wrapper {
-                height: 180px;
-            }
-
-            .text-box {
-                padding: 15px;
-            }
-
-            .text-box p {
-                font-size: 0.9rem;
-            }
-
-            .cta-button {
-                padding: 10px 20px;
-                font-size: 0.9rem;
-                margin: 15px;
-            }
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 50px;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CADBOXX — Assemble, Animate, Simulate 3D</title>
+  <meta name="description" content="CADBOXX — A new platform that adds assembly, animation and physics simulation to any CAD or 3D software. Tokenized platform with rewards for token holders." />
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <h1>CADBOXX SYSTEM</h1>
-        <p>CREATE ACCOUNTS AT EACH OF THESE AND DOWNLOAD THE HOW-TO GUIDE</p>
-		
-		
-		
-    </header>
-
-    <div class="container">
-        <div class="sections-grid">
-            <!-- Section 1 -->
-            <div class="section">
-                <div class="section-number">COINBASE</div>
-                <div class="image-wrapper">
-                    <img src="COINBASE9.jpg" alt="Section 1 Image">
-                </div>
-                <div class="text-box">
-                    <p>The CADBOXX system worrks with Coinbase, please create a Coinbase account by clicking the button below.</p>
-                </div>
-                <button class="cta-button" onclick="handleClick(1)" >BUTTON 1</button>
-            </div>
-
-            <!-- Section 2 -->
-            <div class="section">
-                <div class="section-number">FREE BITCOIN</div>
-                <div class="image-wrapper">
-                    <img src="BITCOIN.jpg" alt="Section 2 Image">
-                </div>
-                <div class="text-box">
-                    <p>Please create an account by clicking the button below and follow the tutorial.</p>
-                </div>
-                <button class="cta-button" href="freebitco.in">BUTTON 2</button>
-            </div>
-
-            <!-- Section 3 -->
-            <div class="section">
-                <div class="section-number">PI NETWORK</div>
-                <div class="image-wrapper">
-                    <img src="PINETWORK.jpg" alt="Section 3 Image">
-                </div>
-                <div class="text-box">
-                    <p>Start mining PI coin</p>
-                </div>
-                <button class="cta-button" onclick="handleClick(3)">BUTTON 3</button>
-            </div>
-
-            <!-- Section 4 -->
-            <div class="section">
-                <div class="section-number">ROLLERCOIN</div>
-                <div class="image-wrapper">
-                    <img src="ROLLERCOIN.jpg" alt="Section 4 Image">
-                </div>
-                <div class="text-box">
-                    <p>Sign up at Rollercoin.com and take your first steps towards your fortune.</p>
-                </div>
-                <button class="cta-button" onclick="handleClick(4)">BUTTON 4</button>
-            </div>
-			
-			 <!-- Section 5-->
-            <div class="section">
-                <div class="section-number">HOW-TO</div>
-                <div class="text-box">
-                    <p>Now the accounts are ready you can start mining and collecting your fortune  </p>
-                </div>
-                <div class="text-box">
-                    <p>Start the day by doing a roll on freebitco.in. Set your alarm for every hour and do as many rolls as you can.</p>
-                </div>
-                <button class="cta-button" onclick="handleClick(5)">BUTTON 5</button>
-            </div>
-        </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">CADBOXX</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="#tokenomics">Tokenomics</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="/services/service-1.html">Services</a>
+        <a class="cta" href="#get-started">Get Early Access</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        ☰
+      </button>
     </div>
+  </header>
 
-    <footer>
-        <p>&copy; 2026 CADBOXX All rights reserved.</p>
-    </footer>
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1>CADBOXX — A Tokenized Project Creating 3D Assemblies, Animation & Simulation</h1>
+        <p>Create assemblies of 3D models, animate them, run physics simulations — works with any CAD or 3D filetype and integrates with your favourite design tools.</p>
+        <a class="hero-cta" href="#how-it-works">Learn How</a>
+      </div>
+    </section>
 
-    <script>
-        // Handle Call-to-Action button clicks
-        function handleClick(sectionNumber) {
-            console.log(`Section ${sectionNumber} button clicked!`);
-            alert(`You clicked the Call to Action button for Section ${sectionNumber}!`);
-        }
+    <section class="carousel-section" aria-label="Showcase carousel">
+      <div class="container">
+        <div class="carousel" id="carousel" data-autoplay-interval="5000">
+          <div class="carousel-track" aria-live="polite"></div>
 
-        // Optional: Add more JavaScript interactions
-        document.addEventListener('DOMContentLoaded', function() {
-            // Log when the page is fully loaded
-            console.log('Page loaded successfully!');
+          <button class="carousel-btn prev" aria-label="Previous slide">&larr;</button>
+          <button class="carousel-btn next" aria-label="Next slide">&rarr;</button>
 
-            // Add event listeners to all images for hover effects
-            const images = document.querySelectorAll('.image-wrapper img');
-            images.forEach(image => {
-                image.addEventListener('mouseenter', function() {
-                    console.log(`Hovering over image in section`);
-                });
-            });
-        });
-    </script>
+          <div class="carousel-indicators" role="tablist" aria-label="Slide indicators"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="container features">
+      <h2>What CADBOXX Gives Designers</h2>
+      <div class="feature-grid">
+        <article>
+          <h3>Universal integration</h3>
+          <p>Works with all CAD & 3D packages and all common 3D file types — Simply import, assemble and animate without conversion headaches.</p>
+        </article>
+        <article>
+          <h3>Physics simulations</h3>
+          <p>Run real-time physics simulations for devices — collisions, constraints, material behavior and more.</p>
+        </article>
+        <article>
+          <h3>Token-based rewards</h3>
+          <p>Hold CADBOXX tokens to receive discounts, priority access and exclusive features.</p>
+        </article>
+        <article>
+          <h3>Collaborative workflows</h3>
+          <p>Share assemblies, export animations, and collaborate across teams with versioning and comments.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="tokenomics" class="container tokenomics">
+      <h2>Tokenomics & Fundraising</h2>
+      <p>The initial supply will be 1,000,000,000 CADX tokens. The token sale is expected to raise approximately €360,000,000 to scale the platform, build integrations, and accelerate adoption.</p>
+
+      <div class="token-grid">
+        <div>
+          <h3>Token Supply</h3>
+          <p>1,000,000,000 CADX (initial)</p>
+        </div>
+        <div>
+          <h3>Fundraising Target</h3>
+          <p>~€360,000,000 (initial round)</p>
+        </div>
+        <div>
+          <h3>Holder Benefits</h3>
+          <ul>
+            <li>Platform discounts & subscription credits</li>
+            <li>Early access to new tools & features</li>
+            <li>Exclusive marketplace perks and staking rewards</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Listing</h3>
+          <p>CADX will be listed on multiple exchanges; tokens will be tradable in the usual way.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="container how-it-works">
+      <h2>How CADBOXX Works</h2>
+      <ol>
+        <li>Convert any 3D file (STEP, STL, OBJ, FBX etc) to GLB</li>
+        <li>Assemble parts in the CADBOXX environment with constraint tools</li>
+        <li>Create animations or run physics simulations</li>
+        <li>Export animations or simulation results; integrate into your CAD toolchain</li>
+        <li>Pay or redeem discounts using CADX tokens</li>
+      </ol>
+    </section>
+<!-- SITETWO -->
+    <section id="get-started" class="container get-started">
+      <h2>Get early access & discounts</h2>
+      <p>Sign up to join the private beta and learn about token pre-sale windows and rewards.</p>
+      <form class="signup" action="#" onsubmit="alert('Thank you! We will contact you.');return false;">
+        <input type="email" name="email" placeholder="Your email address" required>
+        <button type="submit" class="cta">Request Access</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>CADBOXX</strong>
+        <p>Assemble • Animate • Simulate</p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="#features">Features</a>
+        <a href="#tokenomics">Tokenomics</a>
+        <a href="/services/service-1.html">Services</a>
+        <a href="#">Legal</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script type="module" src="js/carousel.js"></script>
+  <script>
+    // Slide data: 20 slides; replace titles/descriptions/images as needed.
+    const slides = Array.from({length:20}, (_,i) => {
+      const idx = i + 1;
+      const slug = `service-${idx}`;
+      return {
+        id: slug,
+        title: `Service ${idx}: Design Feature ${idx}`,
+        description: `Detailed capability or service description for feature ${idx} — powerful assembly, animation or physics tools.`,
+        // Using Picsum seeded images; replace with your hosted images in /assets/...
+        image: `https://picsum.photos/seed/cadboxx-${idx}/1600/900`,
+        thumb: `https://picsum.photos/seed/cadboxx-${idx}/600/338`,
+        link: `services/${slug}.html`
+      };
+    });
+
+    // Initialize the carousel with the slide data
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.querySelector('.carousel-track');
+      slides.forEach((s, i) => {
+        const slide = document.createElement('article');
+        slide.className = 'carousel-slide';
+        slide.setAttribute('data-slide-index', i);
+        slide.innerHTML = `
+          <img
+            class="carousel-image"
+            src="${s.thumb}"
+            data-src="${s.image}"
+            alt="${s.title}"
+            loading="lazy"
+          />
+          <div class="slide-overlay">
+            <h3>${s.title}</h3>
+            <p>${s.description}</p>
+            <a class="slide-cta" href="${s.link}">Learn about ${s.title}</a>
+          </div>
+        `;
+        container.appendChild(slide);
+      });
+
+      // Dispatch a custom event so carousel.js can initialize
+      window.dispatchEvent(new CustomEvent('cadboxx:slidesReady'));
+    });
+  </script>
 </body>
 </html>
